@@ -111,3 +111,11 @@ xpicture, but the numeric abilities of "calculator" and
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Aug 09 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0a-1
++ Revision: 813425
+- Import texlive-calculator
+- Import texlive-calculator
+

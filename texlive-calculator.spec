@@ -6,7 +6,7 @@
 # catalog-version 2.0
 Name:		texlive-calculator
 Version:	2.0
-Release:	1
+Release:	2
 Summary:	Use LaTeX as a scientific calculator
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/calculator

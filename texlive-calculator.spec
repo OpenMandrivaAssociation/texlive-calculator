@@ -5,9 +5,9 @@ Summary:	Use LaTeX as a scientific calculator
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/calculator
 License:	LPPL1.2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.r64424.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.doc.r64424.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.source.r64424.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg

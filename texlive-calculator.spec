@@ -1,6 +1,6 @@
 Name:		texlive-calculator
 Version:	64424
-Release:	1
+Release:	2
 Summary:	Use LaTeX as a scientific calculator
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/calculator

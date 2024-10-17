@@ -3,7 +3,7 @@ Version:	64424
 Release:	2
 Summary:	Use LaTeX as a scientific calculator
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/calculator
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/calculator
 License:	LPPL1.2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.doc.r%{version}.tar.xz

@@ -1,49 +1,28 @@
-Name:		texlive-calculator
-Version:	64424
-Release:	2
+%global tl_name calculator
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2.1
+Release:	%{tl_revision}.1
 Summary:	Use LaTeX as a scientific calculator
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/calculator
-License:	LPPL1.2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.source.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/calculator.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The calculator and calculus packages define several
-instructions which allow us to realise algebraic operations and
-to evaluate elementary functions and derivatives in our
-documents. The package's main goal is to define the arithmetic
-and functional calculations need in the author's package
-xpicture, but the numeric abilities of "calculator" and
+The calculator and calculus packages define several instructions which
+allow us to realise algebraic operations and to evaluate elementary
+functions and derivatives in our documents. The package's main goal is
+to define the arithmetic and functional calculations needed in the
+author's package xpicture, but the numeric abilities of "calculator" and
 "calculus" may be useful in other contexts.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/calculator
-%doc %{_texmfdistdir}/doc/latex/calculator
-#- source
-%doc %{_texmfdistdir}/source/latex/calculator
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
